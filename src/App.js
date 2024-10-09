@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import Potato from "./Potato";
+
+
+function Food(props){
+  // console.log(props)
+  // return <h1>I like {props.fav}.</h1>
+
+  const{ fav } = props
+  return <h1>I like {fav} </h1>
+}
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div><h1>Hello~!</h1></div>
+      <Food fav="kimchi"/>
+      <Food fav="chukumi"/>
+      <Food fav="samgiopsal"/>
     </div>
-  );
+  )
 }
 
 export default App;
