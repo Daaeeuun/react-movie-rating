@@ -1,54 +1,20 @@
 import React from "react";
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
-    console.log('hello')
+  state = {             //state가 객체고
+    isLoading: true,    //isLoaing, movies는 객체의 속성(프로터피).
+    movies: [],
   }
 
   componentDidMount(){
-    console.log('conponent rendered')
-  }
-
-  componentDidUpdate(){
-    console.log('I just updated')
-  }
-  
-  componentWillUnmount(){
-    console.log('Goodbye')
-  }
-
-  state = {
-    count: 0
-  }
-
-  add = () => {
-    // console.log('add')
-    // this.state.count = 1
-    // this.setState({ count: this.state.count + 1})
-    this.setState(current => ({
-      count: current.count + 1
-    }))
-  }
-
-  minus = () => {
-    // console.log('minus')
-    // this.state.count = -1
-    // this.setState({ count: this.state.count - 1 })
-    this.setState(current => ({
-      count: current.count - 1
-    }))
-
+    //영화데이터 로딩 구현
+    setTimeout(()=>{      //첫번째 인자로 setTimeout()전달
+      this.setState({isLoading: false}) //state 값 바꾸기 위함
+    }, 3000)
   }
   render() {
-    console.log('I`m render')
-    return (
-      <div>
-        <h1>The number is: {this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    )
+    const { isLoading } = this.state    //구조분해할당
+    return <div>{isLoading ? 'Loading..' : 'We are ready'}</div>
   }
 }
 
