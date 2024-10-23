@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Daaeeuun/react-movie-rating/static/css/main.636ef99a.css",
+    "main.js": "/Daaeeuun/react-movie-rating/static/js/main.9cfb9e2a.js",
+    "static/media/logo.jpg": "/Daaeeuun/react-movie-rating/static/media/logo.b3f12b6a24a9f5d3f547.jpg",
+    "index.html": "/Daaeeuun/react-movie-rating/index.html",
+    "main.636ef99a.css.map": "/Daaeeuun/react-movie-rating/static/css/main.636ef99a.css.map",
+    "main.9cfb9e2a.js.map": "/Daaeeuun/react-movie-rating/static/js/main.9cfb9e2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.636ef99a.css",
+    "static/js/main.9cfb9e2a.js"
+  ]
+}
