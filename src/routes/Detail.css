@@ -1,0 +1,72 @@
+/* 전체 컨테이너 */
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 제목 */
+  .detail-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  /* 이미지 스타일 */
+  .detail-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 텍스트 정보들 */
+  .detail-container p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;  /* 줄 간격 추가 */
+    max-width: 800px;  /* 텍스트 폭 제한 */
+    text-align: justify;  /* 텍스트를 좌우 양쪽 정렬 */
+    margin-bottom: 20px;
+  }
+  
+  /* 영화의 특정 정보 (년도, 평점, 장르 등) */
+  .detail-container .movie-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .detail-container .movie-info p {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  /* 홈으로 돌아가는 버튼 */
+  .detail-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #696969;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .detail-container button:hover {
+    background-color: #3a3a3a;
+  }
+  

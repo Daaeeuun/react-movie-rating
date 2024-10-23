@@ -14,25 +14,49 @@
 
 
 
-import React from "react";
-import "./App.css";
-import { HashRouter, Routes, Route } from 'react-router-dom';
-import About from './routes/About';
-import Home from './routes/Home'
+// import React from "react";
+// import "./App.css";
+// import { HashRouter, Routes, Route } from 'react-router-dom';
+// import About from './routes/About';
+// import Home from './routes/Home'
+// import Navigation from "./components/Navigation";
+// import Detail from "./routes/Detail";
 
-function App() {
-  return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" exact={true} element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </HashRouter>
-  );
-}
-// df
+// function App() {
+//   return (
+//     <HashRouter>
+//       <Navigation />
+//       <Routes>
+//         <Route path="/" exact={true} element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/movie-detail" element={<Detail />} />
+//         {/* <Route path="/movie-detail" Component={<Detail />} /> */}
+//       </Routes>
+//     </HashRouter>
+//   );
+// }
 
-export default App;
+// export default App;
+
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Home from './routes/Home'
+// // import Navigation from "./components/Navigation";
+// import Detail from "./routes/Detail";
+
+
+// function App() {
+//     return (
+//         <Router>
+//             <Routes>
+//                 <Route path="/" element={<Home />} />
+//                 <Route path="/movie-detail" element={<Detail />} />
+//             </Routes>
+//         </Router>
+//     );
+// }
+
+// export default App;
+
 
 
 // import React from "react";
@@ -65,3 +89,33 @@ export default App;
 
 // export default App;
 
+// App.js
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './routes/Home';
+import Detail from './routes/Detail';
+import About from './routes/About'
+import Navigation from "./components/Navigation";
+import "./App.css"
+import logo from './logo.jpg';
+
+
+function App() {
+  return (
+    <Router>
+      <header className="header">
+         <img src={logo} alt="FlickRate" />
+        {/* <h1>FlickRate</h1>  */}
+        <Navigation />
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Routes>
+      </main>
+    </Router>
+  );
+}
+
+export default App;
